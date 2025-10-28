@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: auto 80px 1fr 80px;
+    grid-template-areas:
+        "nav nav"
+        "header header"
+        "aside main"
+        "footer footer";
+    height: 100vh;
+}
+
+nav {
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    text-align: right;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 0;
+}
+
+nav p {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+nav p:hover {
+    background-color: lightgrey;
+    transition-duration: 0.75s;
+    transform: scale(1.2);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    grid-area: header;
+    position: sticky;
+    top: 70px;
+    font-size: 30px;
+    background-color: lightgrey;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.img1 {
+    height: 60px;
+    width: auto;
+    margin-right: 15px;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #2c3e50;
+    color: white;
+    padding: 0 20px 20px 20px;
+}
+
+.img2 {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.img2:hover{
+    transition-duration: 0.75s;
+    transform: scale(1.2);
+}
+
+main {
+    grid-area: main;
+    background-color: #ecf0f1;
+    padding-bottom: 20px;
+}
+
+.contenedor {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.requisitos {
+    display: flex;
+    gap: 20px;
+}
+
+.borde {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.caja1, .caja2, .caja3 {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.caja2, .caja3 {
+    margin-top: 10px;
+}
+
+.izquierda {
+    text-align: center;
+    grid-column: 1/2;
+    border: 1px solid black;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+.derecha {
+    text-align: center;
+    grid-column: 2/3;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+.abajo {
+    grid-column: 1/3;
+    border-top: 1px solid black;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #34495e;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+}
